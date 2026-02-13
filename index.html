@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="container-fluid mainContainer pt-3">
+            <div class="row mt-3">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 weatherBox ps-0 pe-0 pb-3">
+
+                    <div class="col-md-12 box3 pt-2">
+
+                        <i class="fa-solid fa-cloud-bolt icon1"></i>
+                        <span class="myText">Weather App</span>
+
+
+                    </div>
+
+                    <div class="row mt-4 ms-1 input-field">
+                        <div class="col-10 col-md-7">
+                            <div class="input-group">
+                                <input type="text" class="form-control input" placeholder="Search for a city..."
+                                    aria-label="Recipient’s username" aria-describedby="button-addon2">
+                                <button class="btn btn-primary search" type="submit" id="button-addon2">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="text-danger text-center h4 mt-5"></h4>
+
+                    <div class="row mt-3 ps-2 wow">
+                        <div class="col-12 col-md-8 leftPanel ps-3 pe-3">
+                            <div class="row align-items-start mb-2 weatherRow">
+                                <div class="col-md-12 leftWeathercard mt-2 ms-md-1 text-light">
+
+                                    <div>
+                                        <h4 id="cityName"></h4>
+                                        <h6 id="date"></h6>
+                                    </div>
+                                    <div>
+                                        <h1 id="temperature"></h1>
+                                        <h5 id="status"></h5>
+                                        <div class="d-flex mt-3 high-end">
+                                            <h6 class="me-md-3 max"></h6>
+                                            <h6 class="min"></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 mt-3">
+                                    <div class="InfoBox">
+                                        <div class="row InfoBoxrow">
+                                            <div class="col-md-3 col-6 InfoBoxcol mb-2">
+                                                <i class="fa-solid fa-droplet common-icon me-1"></i>
+                                                <div class="commonDiv">
+                                                    <span>Humidity</span>
+                                                    <span id="humidity"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-6 InfoBoxcol mb-2">
+                                                <i class="fa-solid fa-wind common-icon me-1"></i>
+                                                <div class="commonDiv">
+                                                    <span>Wind</span>
+                                                    <span id="wind"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-6 InfoBoxcol mb-2">
+                                                <img src="images/sunrise-2.png" alt="Sunrise" class="weather-icon me-1">
+                                                <div class="commonDiv">
+                                                    <span>Sunrise</span>
+                                                    <span id="sunrise"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-6 InfoBoxcol mb-2">
+                                                <img src="images/sunset.jpg" alt="Sunset" class="weather-icon me-1">
+                                                <div class="commonDiv">
+                                                    <span>Sunset</span>
+                                                    <span id="sunset"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 mt-4">
+                                    <div class="InfoBox">
+                                        <div class="row InfoBoxrow">
+
+                                            <div class="col-md-3 col-6 InfoBoxcol mb-2">
+                                                <i class="fa-solid fa-temperature-high globe-icon me-1"></i>
+                                                <div class="commonDiv">
+                                                    <span>Feels Like</span>
+                                                    <span id="feelslike"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-6 InfoBoxcol mb-2">
+                                                <i class="fa-solid fa-earth-americas globe-icon me-1"></i>
+                                                <div class="commonDiv">
+                                                    <span>AirQuality</span>
+                                                    <span id="AQ"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-6 InfoBoxcol mb-2">
+                                                <i class="fa-solid fa-earth-americas globe-icon me-1"></i>
+                                                <div class="commonDiv">
+                                                    <span>Pressure</span>
+                                                    <span id="pressure"></span>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-md-3 col-6 InfoBoxcol mb-2">
+                                                <i class="fa-solid fa-eye common-icon me-1"></i>
+                                                <div class="commonDiv">
+                                                    <span>Visibility</span>
+                                                    <span id="visibility"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-md-4 pt-4 pt-md-2 right-panel">
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-2 "></div>
+
+                </div>
+            </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Heroicons CDN -->
+    <script src="https://unpkg.com/heroicons@2.0.18/dist/heroicons.min.js"></script>
+
+    <script src="script.js"></script>
+
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div id="liveToast" class="toast text-bg-danger" role="alert">
+            <div class="toast-body">
+                Please Enter City Name First!
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

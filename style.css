@@ -1,0 +1,243 @@
+/* ===== RESET SAFETY ===== */
+* {
+    box-sizing: border-box;
+}
+
+/* ===== BACKGROUND ===== */
+.mainContainer{
+    min-height: 100vh;
+    background-image: url(images/forest-6.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* ===== MAIN CARD ===== */
+.weatherBox{
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    margin-bottom: 40px;
+    height: 620px;
+}
+
+/* ===== HEADER ===== */
+.box3{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.icon1{
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.myText{
+    font-size: 18px;
+}
+
+
+/* ===== HERO WEATHER IMAGE ===== */
+
+.leftWeathercard{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 230px;
+    color:#B8ECFF;
+    text-shadow: 0 2px 6px rgba(0,0,0,.45);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border-radius: 8px;
+}
+/* HERO LEFT PANEL COLORS */
+
+#cityName,
+#date,
+.max,
+.min{
+    color:#fff;
+}
+#temperature{
+    font-weight:700;
+}
+
+#status{
+    letter-spacing:1px;
+}
+
+/* ===== INFO CARDS ===== */
+.InfoBox{
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ===== ICON GRID ROW ===== */
+.InfoBoxrow{
+    display: flex;
+    align-items: stretch;     /* 🔥 KEY FIX */
+}
+
+/* ===== ICON ITEM ===== */
+.InfoBoxcol{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    position: relative;
+}
+ .weatherRow{
+        padding-left: 8px;
+        padding-right: 20px;
+    }
+/* ===== VERTICAL DIVIDER (DESKTOP ONLY) ===== */
+@media (min-width: 768px){
+    .InfoBoxcol:not(:last-child)::after{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 12px;
+        bottom: 12px;
+        width: 1px;
+        background-color: rgba(0,0,0,0.3);
+    }
+}
+/* ===== MOBILE FIX ===== */
+@media (max-width: 767px){
+    .InfoBoxrow{
+        flex-wrap: wrap;
+    }
+
+    .InfoBoxcol::after{
+        display: none;   /* ❌ NO BORDER ON MOBILE */
+    }
+    .myBox{
+        margin-top:0px;
+        
+    }
+    .weatherBox{
+        height: 1300px;
+    }
+    .high-end{
+        display: flex;
+        flex-direction: column;
+    }
+    .input-field{
+        margin-left: 6px;
+    }
+    .forecast-col{
+        margin-left: 15px;
+    }
+    .weatherRow{
+        padding-left: 11px;
+    }
+    .InfoBox{
+        margin-right: 10px;
+    }
+}
+
+/* ===== ICON STYLES ===== */
+.common-icon{
+    font-size: xx-large;
+    color: #0d6efd;
+}
+
+.globe-icon{
+    font-size: xx-large;
+    color: orangered;
+}
+.sun-icon{
+    font-size: xx-large;
+    color: yellow;
+}
+.weather-icon{
+    width: 40px;
+    height: 40px;
+}
+.moon-icon{
+    font-size: xx-large;
+    /* color: whitesmoke; */
+}
+
+/* ===== TEXT ===== */
+.commonDiv{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.commonDiv span:last-child{
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+/* ===== FORECAST ===== */
+
+.left-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.forecast-col{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 87px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    color:#7FCFF0;
+}
+.forecast-col{
+    position: relative;
+    overflow: hidden;
+}
+
+.forecast-col::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 0;
+}
+
+.forecast-col *{
+    position: relative;
+    z-index: 1;
+}
+.forecast-temp{
+    font-size: large;
+}
+.day-heading{
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color:#B8ECFF;
+}
+.text-style{
+    /* color: #8FD3F4; */
+    font-weight: bold;
+     color:#9ADCF8;
+}
+.right-box span{
+    font-weight:bold;
+    font-size:large;
+}
+.font-icon{
+    font-weight: bold;
+    font-size: large;
+}
+.right-box{
+    text-shadow: 0 2px 4px rgba(0,0,0,.5);
+}
+
+/* ===== HR LINE ===== */
+.light-line{
+    border: none;
+    border-top: 2px solid #ddd;
+    margin: 10px 0;
+}
